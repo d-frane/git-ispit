@@ -1,7 +1,7 @@
 import layout from "./views/layout";
 import fetchCountries from "./countries";
 import createList from "./views/list";
-
+var randomstring = require("randomstring");
 
 function render(markup, parent) {
   parent.innerHTML = markup;
@@ -13,7 +13,8 @@ function setup() {
   //layoutContainer.innerHTML = layout;
   render(layout, layoutContainer);
 
- 
+ const h1 = document.getElementById("h1");
+ h1.innerText = randomstring.generate();
 
   const searchInput = document.getElementById("search");
   const searchButton = document.getElementById("searchButton");
